@@ -1,0 +1,20 @@
+package ie.atu.week5blockingapplication.week5blockingapplication;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
+
+@SpringBootApplication
+public class Week5BlockingApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Week5BlockingApplication.class, args);
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+}
