@@ -11,6 +11,7 @@ public class TodoResponse {
     @JsonProperty("id")
     private int id;
 
-
+    @JsonProperty("title")
+    private int title;
 
 }
