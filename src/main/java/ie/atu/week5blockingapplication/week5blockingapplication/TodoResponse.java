@@ -8,4 +8,7 @@ public class TodoResponse {
     @JsonProperty("userId")
     private int userId;
 
+    @JsonProperty("id")
+    private int id;
+
 }
