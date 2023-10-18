@@ -1,7 +1,20 @@
 package ie.atu.week5blockingapplication.week5blockingapplication;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class BlockingService {
+    private BlockingService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+    public String fetchDataBlocking() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return restTemplate.getForObject("https://jsonplaceholder.typicode.com/todos/1", String.class);
+    }
 }
