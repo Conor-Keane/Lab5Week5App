@@ -5,7 +5,9 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class BlockingService {
-    private BlockingService(RestTemplate restTemplate) {
+    private final RestTemplate restTemplate;
+
+    public BlockingService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
