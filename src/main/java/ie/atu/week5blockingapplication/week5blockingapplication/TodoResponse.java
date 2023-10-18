@@ -12,6 +12,9 @@ public class TodoResponse {
     private int id;
 
     @JsonProperty("title")
-    private int title;
+    private String title;
+
+    @JsonProperty("completed")
+    private boolean completed;
 
 }
