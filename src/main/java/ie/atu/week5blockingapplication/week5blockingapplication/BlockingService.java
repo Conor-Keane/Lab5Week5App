@@ -18,5 +18,8 @@ public class BlockingService {
             e.printStackTrace();
         }
         return restTemplate.getForObject("https://jsonplaceholder.typicode.com/todos/1", String.class);
+
+
+
     }
 }
